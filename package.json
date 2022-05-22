@@ -1,0 +1,37 @@
+{
+  "name": "twitch-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install && chmod +x ./husky-config.sh && ./husky-config.sh",
+    "dev": "ts-node-dev --transpile-only --no-notify --exit-child src/app.ts",
+    "build": "npx tsc",
+    "prod": "npm run build && node build/app.js"
+  },
+  "author": "smoovify",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/lodash": "^4.14.182",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.1",
+    "ts-node": "^10.8.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.6.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "apollo-server": "^3.7.0",
+    "dotenv": "^16.0.1",
+    "graphql": "^16.5.0",
+    "lodash": "^4.17.21",
+    "mongodb": "^4.6.0",
+    "mongoose": "^6.3.4",
+    "nexus": "^1.3.0"
+  }
+}
